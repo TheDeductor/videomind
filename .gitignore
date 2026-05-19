@@ -1,0 +1,43 @@
+# ─── Python ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Virtual environments ────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ─── Secrets — never commit ──────────────────────────────────────────────
+.env
+.env.local
+*.key
+secrets.toml
+.streamlit/secrets.toml
+
+# ─── ChromaDB persistence (if you ever switch off in-memory) ─────────────
+chroma_db/
+*.sqlite3
+
+# ─── IDE ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ─── Streamlit cache ─────────────────────────────────────────────────────
+.streamlit/cache/
+
+# ─── Logs ────────────────────────────────────────────────────────────────
+*.log
