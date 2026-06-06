@@ -133,18 +133,7 @@ Open `http://localhost:8501`.
 
 ---
 
-## 🎨 The light-mode contrast bug
 
-The original version had several places where Streamlit's default white text leaked through onto the light background:
-
-- `[data-testid="stMarkdownContainer"]` and descendants weren't getting an explicit `color` rule.
-- `st.text()` renders into a `<pre>` that inherits from its parent — which was also missing an override.
-- Tab content (`[data-testid="stTabContent"]`) needed its own rule because Streamlit scopes some defaults there.
-- The gradient page-title used `-webkit-text-fill-color: transparent` with no fallback colour.
-
-Fixed in `theme.py` — every text container now has an explicit `color: var(--tx)` rule, and gradients have a solid colour fallback so even browsers that fail the gradient render readable text.
-
----
 
 ## ⚙️ Configuration
 
